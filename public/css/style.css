@@ -1,0 +1,36 @@
+body {
+    background-color: lightblue;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table {
+    width: 50%;
+    margin:auto;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    background-color: lightyellow;
+    height: 2em;
+}
+
+td {
+    background-color: aliceblue;
+}
+
+.centered {
+    text-align: center;
+}
+
+.contact {
+    margin: 0 30px;
+    padding: 5px;
+    background-color: aliceblue;
+}
