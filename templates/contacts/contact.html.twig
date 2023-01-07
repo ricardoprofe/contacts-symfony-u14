@@ -16,7 +16,7 @@
                 <li><strong>Email:</strong> {{ contact.email }} </li>
                 <li><strong>Phones:</strong>
                     <ul>
-                        {% for phone in phones %}
+                        {% for phone in contact.phones %}
                             <li> {{ phone.type }}: {{ phone.number }} </li>
                         {% endfor %}
                     </ul>

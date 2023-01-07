@@ -15,12 +15,9 @@ class ContactsController extends AbstractController
     public function contact(ManagerRegistry $doctrine, $id=''): Response
     {
         $contact = $doctrine->getRepository(Contact::class)->find($id);
-        $contactsPhones = $doctrine->getRepository(Phone::class)
-            ->findBy(['id_contact'=>$id]);
 
         return $this->render('contacts/contact.html.twig', [
             'contact' => $contact,
-            'phones' => $contactsPhones,
             'page_title' => 'My Contacts App - Contact'
         ]);
     }
@@ -34,7 +31,7 @@ class ContactsController extends AbstractController
         ]);
     }
 
-    #[Route('/contact/search/{search_string}', name: 'contact_list')]
+    #[Route('/contact/search/{search_string}', name: 'search_contact')]
     public function searchContact(ManagerRegistry $doctrine, $search_string=''): Response
     {
         return $this->render('contacts/list.html.twig', [
